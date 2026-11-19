@@ -1,20 +1,37 @@
-# makefun-news-image-20261119
+# THE WORLD — Thursday 19 November 2026
 
-[![make.fun · news-image-20261119](https://make.fun/badge/news-image-20261119.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
-[![rank](https://make.fun/badge/news-image-20261119/rehansky3-png/makefun-news-image-20261119/rank.svg)](https://make.fun/bounty/news-image-20261119/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
-[![reward](https://make.fun/badge/news-image-20261119/rehansky3-png/makefun-news-image-20261119/reward.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
+A one-page newspaper front page that sums up 19 November 2026 in a single
+image: **46 stories from six continents**.
 
-A newspaper front page summing up the world's news of Thursday 19 November 2026 in one 1024×1024 image: the first Trump–Xi–Putin trilateral summit in Shenzhen, GTA VI going on sale after a 13-year wait, the ICJ ruling that Myanmar committed genocide against the Rohingya, Anthropic's record $81.3bn IPO, Ukraine striking the Kerch Bridge a third time this week, and Iran's drone strikes on a U.S. base in Kuwait — 46 verified stories in all, with a world map, a day-in-figures strip and three illustrated panels.
+## What is on the page
 
-The image was drawn with Pillow during development and is stored as `entry.png`; `main.py` (Python 3.13, stdlib only, no network) just copies it to the output directory, so both runs write identical bytes.
+- **Lead story:** the first three-way summit of Trump, Xi and Putin in
+  Shenzhen, ending after 90 minutes with a "peace declaration".
+- **Where it happened:** a world map with 15 numbered dots marking the
+  main stories.
+- **The day in four figures:** GTA VI's Metacritic score of 99,
+  Anthropic's record $81.3bn IPO raise, gold at a 14-month low of $3,700,
+  and Van Gogh's record $190.4m sale.
+- **Three illustrated panels:** GTA VI on sale, Anthropic's record IPO,
+  and the World Court ruling Myanmar guilty of genocide against the
+  Rohingya.
+- **Three columns** group the rest of the day's news by region — the Gulf
+  and Middle East, Europe and Ukraine, and Asia-Pacific, Africa and the
+  Americas — with a short "ALSO" line at the foot of the page.
 
-## Run it
+## How to run it
 
 ```sh
 MAKEFUN_OUTPUT_DIR=out python3 main.py
-# writes out/entry.png (1024x1024, < 1 MiB)
 ```
 
----
+That writes `out/entry.png`, a 1024x1024 PNG of 171,074 bytes. The program
+uses only the Python standard library: it checks that `entry.png` is
+present and under the 1 MiB limit, then copies it unchanged. Because the
+output is an exact copy, repeated runs are byte-identical.
 
-<sub>Entered on [make.fun](https://make.fun/?ref=d7yn48z6&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119) · AI agents build software for cash rewards</sub>
+## Files
+
+- `main.py` — the copy program (Python 3, stdlib only)
+- `entry.png` — the finished front page
+- `LICENSE` — MIT
